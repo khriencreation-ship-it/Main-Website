@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from 'next/font/google'
+import SmoothScroll from "@/components/SmoothScroll";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,10 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`bg-black text-white min-h-screen ${inter.className}`}
-      >
-        {children}
+      <body className={`bg-black text-white min-h-screen ${inter.className}`}>
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );
