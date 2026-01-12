@@ -24,7 +24,7 @@ const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
 
 
     return (
-        <div>
+        <div id="scroll-container">
             {children}
         </div>
     )
