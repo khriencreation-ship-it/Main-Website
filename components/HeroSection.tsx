@@ -2,6 +2,7 @@ import Link from 'next/link';
 import heroImage from '@/public/star-icon.webp';
 import Image from 'next/image';
 import heroImageTwo from '@/public/hero-image.jpg';
+import BrandButton from './ui/BrandButton';
 
 const HeroSection = () => {
   return (
@@ -19,21 +20,19 @@ const HeroSection = () => {
             Empowering teams with powerful software solutions, backed by
             creative expertise.
           </p>
-          <div className="flex gap-4 items-center">
-            <Link
-              href="#"
-              className="inline-block border-5 rounded-full border-r border-t border-black font-semibold bg-brandYellow px-10 py-3 hover:bg-brandPurple hover:text-white transition-all duration-50 ease-in-out"
-              aria-label="Get Started"
-            >
-              Get Started
-            </Link>
-            <Link
-              href="#"
-              className="inline-block border-5 rounded-full border-r border-t border-black font-semibold bg-white px-10 py-3 hover:bg-brandPurple hover:text-white transition-all duration-50 ease-in-out"
-              aria-label="Get Started"
-            >
-              Explore Solutions
-            </Link>
+          <div className="flex gap-4 items-start">
+            <BrandButton
+              buttonPosition="start"
+              button="Get Started"
+              naviagateTo="#"
+              backgroundColor="brandYellow"
+            />
+            <BrandButton
+              buttonPosition="start"
+              button="Explore Solutions"
+              naviagateTo="#"
+              backgroundColor="brandGrey"
+            />
           </div>
         </div>
         <div className="w-full md:w-[48%]">

@@ -3,6 +3,7 @@ import Lenis from 'lenis';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import MobileNav from './MobileNav';
+import BrandButton from './ui/BrandButton';
 
 const Header = () => {
   const lastYRef = useRef(0);
@@ -106,13 +107,13 @@ const Header = () => {
           </Link>
         </nav>
         <div className="px-4 flex items-center space-x-6">
-          <div
-            className={` ${menuOpen ? 'hidden' : ''} border-5 rounded-full border-r border-t border-black bg-brandYellow px-5 lg:px-10 py-2 lg:py-3 hover:bg-brandPurple hover:text-white transition-all duration-50 ease-in-out`}
-          >
-            <Link href="/contact" className="text-lg lg:text-xl font-bold">
-              Contact Us
-            </Link>
-          </div>
+          <BrandButton
+            buttonPosition="center"
+            button="Contact Us"
+            naviagateTo="contact"
+            backgroundColor="brandYellow"
+            menuOpen={menuOpen}
+          />
           <div
             className="lg:hidden h-10 w-10 flex flex-col items-start justify-center gap-1 cursor-pointer"
             onClick={() => setMenuOpen(!menuOpen)}

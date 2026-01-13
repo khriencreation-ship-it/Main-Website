@@ -41,7 +41,7 @@ const ValuePropostition = () => {
           <div className="w-[40%]">
             <Image src={ValuePropostitionImage} alt="value-proposition-image" />
           </div>
-          <div className="flex-1 ">
+          <div className="flex-1  text-black">
             <h1 className="text-4xl md:text-8xl font-inter font-black uppercase italic leading-tight text-black">
               Technology with Purpose.
             </h1>
@@ -55,8 +55,8 @@ const ValuePropostition = () => {
             <BrandButton
               buttonPosition="start"
               button="How We Help"
-              naviagateTo="contact"
-              backgroundColor='brandYellow'
+              naviagateTo="#"
+              backgroundColor="brandYellow"
             />
             <div className="w-full flex gap-4 mt-6 justify-start items-center">
               <h1 className=" text-2xl font-semibold text-black italic ">
