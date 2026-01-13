@@ -52,7 +52,12 @@ const ValuePropostition = () => {
               confidence. We also provide strategic creative services to make
               your brand and products resonate.
             </p>
-            <BrandButton location="start" button="How We Help" />
+            <BrandButton
+              buttonPosition="start"
+              button="How We Help"
+              naviagateTo="contact"
+              backgroundColor='brandYellow'
+            />
             <div className="w-full flex gap-4 mt-6 justify-start items-center">
               <h1 className=" text-2xl font-semibold text-black italic ">
                 Innovation.

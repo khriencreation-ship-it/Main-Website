@@ -1,3 +1,4 @@
+import CtaSection from '@/components/CtaSection';
 import HeroSection from '@/components/HeroSection';
 import ValuePropostition from '@/components/ValuePropostition';
 
@@ -7,6 +8,7 @@ const page = () => {
       <main className="">
         <HeroSection />
         <ValuePropostition />
+        <CtaSection />
       </main>
     </>
   );
