@@ -1,4 +1,5 @@
-import React from 'react';
+import Image from 'next/image';
+import heroImage from '@/public/star-icon.webp';
 import {
   FiPenTool,
   FiImage,
@@ -49,7 +50,17 @@ const SupportServices = () => {
   ];
 
   return (
-    <section className="min-h-screen max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-8 md:p-20">
+    <section className="min-h-screen relative max-w-360 mx-auto bg-brandYellow my-6 shadow-sm rounded-3xl p-8 md:p-20">
+      <Image
+        src={heroImage}
+        alt="Hero"
+        className="size-24 absolute right-20 top-20"
+      />
+      <Image
+        src={heroImage}
+        alt="Hero"
+        className="size-24 absolute bottom-16 left-16"
+      />
       <div className="flex flex-col space-y-5 justify-center items-center max-w-3xl mx-auto text-center text-black">
         <div className="">
           <p>CREATIVE SUPPORT SERVICES</p>
@@ -68,24 +79,24 @@ const SupportServices = () => {
             key={idx}
             className="rounded-2xl border border-brandPurple/30 py-12 px-8 
                  shadow-sm hover:shadow-xl hover:-translate-y-1
-                 transition-all duration-300 bg-brandYellow/80"
+                 transition-all duration-300 bg-brandGray group text-center"
           >
             {/* Icon */}
             <div
-              className="mb-5 w-14 h-14 flex items-center justify-center
-                      text-brandPurple text-3xl font-bold
-                      bg-brandGreen rounded-full"
+              className="mb-5 w-14 h-14 mx-auto flex items-center justify-center
+                      text-brandYellow text-3xl font-bold
+                      bg-black rounded-full hover:bg-black group-hover:-translate-y-3 transition-all duration-300 ease-in-out"
             >
               {service.icon}
             </div>
 
             {/* Title */}
-            <h3 className="text-2xl font-semibold mb-3 text-brandPurple">
+            <h3 className="text-2xl font-semibold mb-3 text-black">
               {service.title}
             </h3>
 
             {/* Description */}
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="text-black text-lg leading-relaxed text-center">
               {service.description}
             </p>
           </div>

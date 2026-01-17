@@ -1,26 +1,35 @@
+"use client"
 import Link from 'next/link';
 import heroImage from '@/public/star-icon.webp';
 import Image from 'next/image';
-import heroImageTwo from '@/public/hero-image.jpg';
+// import heroVideo from '/landingPage-video.mp4';
 import BrandButton from './ui/BrandButton';
 
 const HeroSection = () => {
   return (
-    <div className="min-h-screen max-w-360 mx-auto bg-white my-6 mt-[13vh] shadow-sm rounded-3xl p-8 md:p-20">
-      <div className="flex justify-between items-center py-10 flex-col md:flex-row gap-10">
-        <div className="text-black space-y-6 w-full md:w-[48%]">
-          <h1 className="text-4xl md:text-7xl font-inter font-black uppercase italic leading-tight">
+    <section className="relative min-h- overflow-hidden max-w-360 mx-auto bg-white my-6 mt-[13vh] shadow-sm rounded-3xl p-8 md:p-20">
+      <div className="">
+        <video  autoPlay muted loop playsInline
+        className='absolute top-0 left-0 inset-1 w-full h-full object-cover z-0' >
+          <source src='/landingPage-video.mp4'
+          type='video/mp4'/>
+        </video>
+        <div className="absolute inset-0 bg-black/50 z-10" />
+      </div>
+      <div className=" relative flex justify-between items-center py-10 flex-col md:flex-row gap-10 z-50">
+        <div className="text-white space-y-6 w-full text-center">
+          <h1 className="text-4xl md:text-7xl font-black uppercase italic leading-tight text-white">
             <span>We Build Tools & Digital Products</span>
-            <span className="inline-block mx-4 align-middle">
+            {/* <span className="inline-block mx-4 align-middle">
               <Image src={heroImage} alt="Hero" className="size-24" />
-            </span>
-            <span>for Modern Businesses.</span>
+            </span> */}
+            <span> for Modern Businesses.</span>
           </h1>
-          <p className="text-lg md:text-2xl font-semibold text-gray-700">
+          <p className="text-lg md:text-2xl font-semibold text-white/80">
             Empowering teams with powerful software solutions, backed by
             creative expertise.
           </p>
-          <div className="flex gap-4 items-start">
+          <div className="flex gap-4 items-start justify-center">
             <BrandButton
               buttonPosition="start"
               button="Get Started"
@@ -35,15 +44,8 @@ const HeroSection = () => {
             />
           </div>
         </div>
-        <div className="w-full md:w-[48%]">
-          <Image
-            src={heroImageTwo}
-            alt="Hero"
-            className="w-full h-auto scale-125"
-          />
-        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

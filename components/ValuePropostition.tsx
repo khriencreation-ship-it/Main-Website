@@ -42,7 +42,7 @@ const ValuePropostition = () => {
             <Image src={ValuePropostitionImage} alt="value-proposition-image" />
           </div>
           <div className="flex-1  text-black">
-            <h1 className="text-4xl md:text-8xl font-inter font-black uppercase italic leading-tight text-black">
+            <h1 className="text-4xl md:text-8xl font-black uppercase italic leading-tight text-black">
               Technology with Purpose.
             </h1>
             <p className="text-lg md:text-2xl font-normal text-black my-8 ">
