@@ -36,7 +36,7 @@ const ValuePropostition = () => {
 
   return (
     <>
-      <section className="min-h-screen max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-8 md:p-20">
+      <section className=" max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-8 md:p-20">
         <div className="flex justify-center items-center gap-10 p-5">
           <div className="w-[40%]">
             <Image src={ValuePropostitionImage} alt="value-proposition-image" />

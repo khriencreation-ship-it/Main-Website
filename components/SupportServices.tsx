@@ -50,7 +50,7 @@ const SupportServices = () => {
   ];
 
   return (
-    <section className="min-h-screen relative max-w-360 mx-auto bg-brandYellow my-6 shadow-sm rounded-3xl p-8 md:p-20">
+    <section className=" relative max-w-360 mx-auto bg-brandYellow my-6 shadow-sm rounded-3xl p-8 md:p-20">
       <Image
         src={heroImage}
         alt="Hero"
