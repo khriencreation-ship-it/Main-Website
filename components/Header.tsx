@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import MobileNav from './MobileNav';
 import BrandButton from './ui/BrandButton';
+import Image from 'next/image';
+import logo from '@/public/sample-logo.png';
 
 const Header = () => {
   const lastYRef = useRef(0);
@@ -73,7 +75,7 @@ const Header = () => {
       <header
         className={`${hidden ? '-translate-y-[150%] opacity-0' : 'translate-y-0'} fixed w-[calc(100%-2rem)] lg:w-full z-50 top-0 md:top-4 left-1/2 -translate-x-1/2 flex justify-between lg:justify-between items-center h-[10vh] max-w-360 bg-brandLightGray  ${menuOpen ? '' : 'shadow-sm'} text-black my-0 px-6 rounded-0 lg:rounded-2xl transition-all duration-500 ease-in-out`}
       >
-        <h1 className="text-xl lg:text-3xl italic font-bold">Khrien</h1>
+        <Image src={logo} width={100} height={100} alt="" />
         <nav className=" hidden lg:flex space-x-12 text-xl font-semibold">
           <Link
             className="hover:text-brandPurple transition-all duration-50 ease-in-out"
@@ -138,19 +140,16 @@ const Header = () => {
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <span
-              className={`h-0.5 w-6 bg-black transition-all duration-300 ${
-                menuOpen ? 'translate-y-1.5 rotate-45' : ''
-              }`}
+              className={`h-0.5 w-6 bg-black transition-all duration-300 ${menuOpen ? 'translate-y-1.5 rotate-45' : ''
+                }`}
             />
             <span
-              className={`h-0.5 w-4 bg-black transition-all duration-300 ${
-                menuOpen ? 'opacity-0' : ''
-              }`}
+              className={`h-0.5 w-4 bg-black transition-all duration-300 ${menuOpen ? 'opacity-0' : ''
+                }`}
             />
             <span
-              className={`h-0.5 w-6 bg-black transition-all duration-300 ${
-                menuOpen ? '-translate-y-1.5 -rotate-45' : ''
-              }`}
+              className={`h-0.5 w-6 bg-black transition-all duration-300 ${menuOpen ? '-translate-y-1.5 -rotate-45' : ''
+                }`}
             />
           </div>
         </div>

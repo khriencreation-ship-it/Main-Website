@@ -38,7 +38,6 @@ const House = () => {
                         <div className="">
                             <h1 className="text-brandYellow text-5xl text-black">Occupancy</h1>
                         </div>
-
                     </div>
                 </div>
             </section>
