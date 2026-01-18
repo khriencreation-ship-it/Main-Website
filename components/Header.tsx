@@ -91,9 +91,9 @@ const Header = () => {
   return (
     <div className="relative">
       <header
-        className={`${hidden ? '-translate-y-[150%] opacity-0' : 'translate-y-0'} fixed w-[calc(100%-2rem)] lg:w-full z-50 top-0 md:top-4 left-1/2 -translate-x-1/2 flex justify-between lg:justify-between items-center h-[10vh] max-w-360 bg-brandLightGray  ${menuOpen ? '' : 'shadow-sm'} text-black my-0 px-6 rounded-0 lg:rounded-2xl transition-all duration-500 ease-in-out`}
+        className={`${hidden ? '-translate-y-[150%] opacity-0' : 'translate-y-0'} fixed w-full z-50 top-0 md:top-4 left-1/2 -translate-x-1/2 flex justify-center lg:justify-between items-center h-[10vh] max-w-360 bg-brandLightGray  ${menuOpen ? '' : 'shadow-sm'} text-black my-0 px-0 lg:px-6 rounded-0 lg:rounded-2xl transition-all duration-500 ease-in-out`}
       >
-        <Image src={logo} width={100} height={100} alt="" />
+        <Image src={logo} width={100} loading="eager" height={100} alt="" />
         <motion.nav
           variants={navVariants}
           initial="hidden"

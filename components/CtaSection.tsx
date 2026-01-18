@@ -16,14 +16,14 @@ const CtaSection = () => {
           Build Smarter. Build with Khrien.
         </h1>
         <p className="text-xl md:text-2xl text-center my-6">
-          Whether you’re launching a product, structuring your operations, or
-          scaling a business, we’re here to help with tools and creative
+          Whether you&apos;re launching a product, structuring your operations, or
+          scaling a business, we&apos;re here to help with tools and creative
           excellence.
         </p>
         <div className="mt-6 flex flex-col lg:flex-row items-center justify-center gap-6 mx-auto">
           <BrandButton
             buttonPosition="center"
-            button="Let’s Build Together"
+            button="Let&apos;s Build Together"
             naviagateTo="#"
             backgroundColor="brandGreen"
           />

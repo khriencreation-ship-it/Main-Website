@@ -1,13 +1,10 @@
 "use client"
-import Link from 'next/link';
 import { motion } from 'motion/react';
-import heroImage from '@/public/star-icon.webp';
-import Image from 'next/image';
 import BrandButton from './ui/BrandButton';
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden max-w-360 mx-auto bg-white my-6 mt-[14vh] shadow-sm rounded-3xl p-8 md:p-20">
+    <section className="relative overflow-hidden max-w-360 mx-auto bg-white my-6 mt-[12vh] md:mt-[14vh] shadow-sm rounded-3xl p-8 md:p-20">
       <div className="">
         <video autoPlay muted loop playsInline
           className='absolute top-0 left-0 inset-1 w-full h-full object-cover z-0'
@@ -45,7 +42,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="flex gap-4 items-start justify-center"
+            className="flex flex-col md:flex-row gap-4 items-center md:items-start justify-center"
           >
             <BrandButton
               buttonPosition="start"

@@ -19,7 +19,7 @@ const House = () => {
                     <div className="w-full md:w-1/2 py-8 md:py-0 text-center md:text-left">
                         <p className="text-lg md:text-2xl font-normal text-black my-4 md:my-8 ">THE HOUSE — YOUR GROWTH NETWORK</p>
                         <h1 className="text-4xl md:text-6xl font-black uppercase italic leading-tight text-black">A Community for Business Builders</h1>
-                        <p className="text-lg md:text-2xl font-normal text-black my-6 md:my-8 ">The House of Khrien is more than a group — it's a home for business owners on a growth journey.</p>
+                        <p className="text-lg md:text-2xl font-normal text-black my-6 md:my-8 ">The House of Khrien is more than a group — it&apos;s a home for business owners on a growth journey.</p>
                         <div className="flex justify-center md:justify-start">
                             <BrandButton
                                 buttonPosition="start"
