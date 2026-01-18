@@ -6,8 +6,8 @@ import { BsTwitterX } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className='max-w-360 mx-auto bg-brandGreen my-6 shadow-sm rounded-3xl p-8 md:p-16'>
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <footer className='relative overflow-hidden overscroll-auto max-w-360 mx-auto bg-brandGreen my-6 z-50 shadow-sm rounded-3xl p-8 md:p-16'>
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div className="logo">
           <Image src={logo} width={100} height={100} alt="" />
         </div>
@@ -37,6 +37,9 @@ const Footer = () => {
             <span className='border border-brandGray p-3 rounded-full'><FaLinkedin className='scale-150 hover:text-brandPurple transition-all duration-100 ease-in-out' /></span>
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-0 z-0 left-1/2 -translate-x-1/2 translate-y-1/4">
+        <Image src={logo} className='scale-200 z-0' alt=''></Image>
       </div>
     </footer>
   );
