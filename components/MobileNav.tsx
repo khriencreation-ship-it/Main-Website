@@ -13,7 +13,7 @@ const MobileNav = ({ menuOpen }: MobileNavProps) => {
         <div className="flex flex-col space-y-6 text-xl font-semibold p-2">
           <Link
             className=" text-black hover:text-brandPurple transition-all duration-50 ease-in-out"
-            href="/home"
+            href="/"
           >
             Home
           </Link>

@@ -4,17 +4,19 @@ import HeroSection from '@/components/HeroSection';
 import House from '@/components/House';
 import SupportServices from '@/components/SupportServices';
 import ValuePropostition from '@/components/ValuePropostition';
+import TrustSection from '@/components/TrustSection';
 
 const page = () => {
   return (
     <>
       <main className="px-4 lg:px-9 min-h-screen">
-      <HeroSection />
-      <ValuePropostition />
-      <SupportServices />
-      <House/>
-      <CtaSection />
-      <Footer />
+        <HeroSection />
+        <ValuePropostition />
+        <SupportServices />
+        <House />
+        <TrustSection />
+        <CtaSection />
+        <Footer />
       </main>
     </>
   );

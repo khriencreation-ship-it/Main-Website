@@ -79,7 +79,7 @@ const Header = () => {
         <nav className=" hidden lg:flex space-x-12 text-xl font-semibold">
           <Link
             className="hover:text-brandPurple transition-all duration-50 ease-in-out"
-            href="/home"
+            href="/"
           >
             Home
           </Link>
