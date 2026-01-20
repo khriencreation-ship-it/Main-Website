@@ -8,7 +8,7 @@ import { motion } from 'motion/react';
 
 const Footer = () => {
   return (
-    <footer className='relative overflow-hidden overscroll-auto max-w-360 mx-auto bg-brandGreen my-6 z-50 shadow-sm rounded-3xl p-8 md:p-20'>
+    <footer className='relative overflow-hidden overscroll-auto max-w-360 mx-auto bg-brandGreen my-6 z-20 shadow-sm rounded-3xl p-8 md:p-20'>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
