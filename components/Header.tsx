@@ -7,6 +7,7 @@ import BrandButton from './ui/BrandButton';
 import Image from 'next/image';
 import logo from '@/public/sample-logo.png';
 import { motion, AnimatePresence } from 'motion/react';
+import { MdArrowDropDown } from "react-icons/md";
 
 const Header = () => {
   const lastYRef = useRef(0);
@@ -109,7 +110,7 @@ const Header = () => {
             </Link>
           </motion.div>
           <motion.div variants={linkVariants} className="relative transition-all duration-50 ease-in-out group">
-            <button className="group-hover:text-brandPurple">About</button>
+            <Link href='/about' className="group-hover:text-brandPurple flex space-x-4 items-center">About <span><MdArrowDropDown className='scale-125'/></span></Link>
             <div className="absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-brandGray shadow-2xl py-10 rounded-2xl transition-all duration-150 ease-in-out">
               <div className="flex flex-col space-y-4">
                 <Link
