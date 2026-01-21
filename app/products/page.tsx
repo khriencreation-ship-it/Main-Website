@@ -1,8 +1,24 @@
-const page = ()=>{
+import HeroSection from "./HeroSection"
+import PainSection from "./PainSection"
+import FeaturesSection from "./FeaturesSection"
+import AudienceSection from "./AudienceSection"
+import AccessSection from "./AccessSection"
+import TechnologySection from "./TechnologySection"
+import ProductCta from "./ProductCta"
+import Footer from "@/components/Footer"
+
+const page = () => {
     return (
-        <>
-        products page
-        </>
+        <main className="px-4 lg:px-9 min-h-screen">
+            <HeroSection />
+            <PainSection />
+            <FeaturesSection />
+            <AudienceSection />
+            <AccessSection />
+            <TechnologySection />
+            <ProductCta />
+            <Footer />
+        </main>
     )
 }
 export default page
