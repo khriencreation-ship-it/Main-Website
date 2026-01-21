@@ -78,25 +78,29 @@ const FeaturesSection = () => {
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: '-100px' }}
+                viewport={{ once: false, margin: '-100px' }}
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
             >
                 {features.map((feature, idx) => (
                     <motion.div
                         key={idx}
                         variants={itemVariants}
+                        whileHover={{ y: -8 }}
+                        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                         className="rounded-2xl border border-brandPurple/30 py-12 px-8 
-                             shadow-sm hover:shadow-xl hover:-translate-y-1
-                             transition-all duration-300 bg-brandGray group text-center"
+                             shadow-sm hover:shadow-xl
+                             transition-shadow duration-300 bg-brandGray group text-center"
                     >
                         {/* Icon */}
-                        <div
+                        <motion.div
+                            whileHover={{ y: -10 }}
+                            transition={{ type: 'spring', stiffness: 300 }}
                             className="mb-5 w-14 h-14 mx-auto flex items-center justify-center
                                     text-brandYellow text-3xl font-bold
-                                    bg-black rounded-full group-hover:-translate-y-3 transition-all duration-300 ease-in-out"
+                                    bg-black rounded-full transition-shadow duration-300 ease-in-out"
                         >
                             {feature.icon}
-                        </div>
+                        </motion.div>
 
                         {/* Title */}
                         <h3 className="text-2xl font-semibold mb-3 text-black">

@@ -80,7 +80,7 @@ const TechnologySection = () => {
                         variants={itemVariants}
                         className={`rounded-2xl border border-brandPurple/30 py-12 px-8 
                              shadow-sm hover:shadow-xl
-                             transition-all duration-300 bg-brandGray group text-center ${feature.hoverColor}`}
+                             transition-shadow duration-300 bg-brandGray group text-center ${feature.hoverColor}`}
                     >
                         {/* Icon */}
                         <div
@@ -116,7 +116,7 @@ const TechnologySection = () => {
                         variants={itemVariants}
                         className={`rounded-2xl border border-brandPurple/30 py-12 px-8 
                              shadow-sm hover:shadow-xl
-                             transition-all duration-300 bg-brandGray group text-center ${feature.hoverColor}`}
+                             transition-shadow duration-300 bg-brandGray group text-center ${feature.hoverColor}`}
                     >
                         {/* Icon */}
                         <div
