@@ -13,7 +13,7 @@ const PainSection = () => {
 
     return (
         <section className="max-w-360 mx-auto my-24 px-4 md:px-0">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Left: Problem Statement */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,7 @@ const PainSection = () => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="bg-brandGray p-8 md:p-10 rounded-2xl border border-brandGreen/30"
                 >
-                    <h3 className="text-2xl md:text-3xl font-black mb-8">
+                    <h3 className="text-2xl md:text-3xl font-black mb-8 text-brandGreen">
                         FirmDesk solves this by:
                     </h3>
                     <div className="space-y-5">

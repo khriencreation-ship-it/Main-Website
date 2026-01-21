@@ -113,7 +113,7 @@ const FeaturesSection = () => {
 
             {/* Bottom callout */}
             <p className="text-center text-xl md:text-2xl mt-12 max-w-3xl mx-auto">
-                All features work together as a <span className="font-black">single system</span> — not as add-ons.
+                All features work together as a <span className="font-black text-brandGreen">single system</span> — not as add-ons.
             </p>
         </section>
     );
