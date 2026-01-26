@@ -14,7 +14,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-3xl md:text-7xl font-black uppercase italic leading-tight text-white"
         >
-          <span>Custom Software for the Real World</span>
+          <span>More Than Creative. Built for Outcomes.</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -22,9 +22,8 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-lg md:text-2xl font-semibold text-white/80"
         >
-          We design and build software that solves real operational problems not generic tools, not one-size-fits-all platforms.
-          <span>          Every product we create is grounded in how people actually work, scale, and grow.
-          </span>
+          We don’t treat branding, content, or design as standalone deliverables.
+ Each service is approached as part of a larger system — supporting product adoption, trust, and performance.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

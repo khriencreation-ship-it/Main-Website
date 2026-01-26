@@ -4,7 +4,7 @@ import BrandButton from './ui/BrandButton';
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden max-w-360 mx-auto bg-white my-6 mt-[12vh] md:mt-[14vh] shadow-sm rounded-3xl p-8 md:p-20">
+    <section className="relative overflow-hidden max-w-360 mx-auto bg-white my-6 mt-[12vh] md:mt-[16vh] shadow-sm rounded-3xl p-8 md:p-20">
       <div className="">
         <video autoPlay muted loop playsInline
           className='absolute top-0 left-0 inset-1 w-full h-full object-cover z-0'

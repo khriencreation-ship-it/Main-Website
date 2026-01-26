@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden max-w-360 mx-auto my-6 mt-[12vh] md:mt-[14vh] shadow-sm rounded-3xl h-[50vh] md:h-[70vh] flex items-center justify-center">
+    <section className="relative overflow-hidden max-w-360 mx-auto my-6 mt-[12vh] md:mt-[16vh] shadow-sm rounded-3xl h-[50vh] md:h-[70vh] flex items-center justify-center">
       <Image
         src="/about-bg.jpeg"
         alt="About Khrien Background"
