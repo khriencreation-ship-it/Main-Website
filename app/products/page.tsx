@@ -9,16 +9,12 @@ import Footer from "@/components/Footer"
 
 const page = () => {
     return (
+        <>
         <main className="px-4 lg:px-9 min-h-screen">
-            <HeroSection />
-            <PainSection />
-            <FeaturesSection />
-            <AudienceSection />
-            <AccessSection />
-            <TechnologySection />
-            <ProductCta />
-            <Footer />
+        
         </main>
+        <Footer/>
+        </>
     )
 }
 export default page

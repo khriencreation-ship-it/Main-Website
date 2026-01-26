@@ -6,7 +6,7 @@ import { FiArrowRight } from 'react-icons/fi';
 const AudienceSection = () => {
     const audiences = [
         'Law firms seeking operational structure',
-        'Litigation and corporate practices',
+        'Law Firms Across Every Legal Discipline',
         'Growing firms transitioning from manual systems',
         'Established firms modernizing internal processes',
     ];

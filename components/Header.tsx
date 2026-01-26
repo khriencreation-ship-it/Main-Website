@@ -7,7 +7,7 @@ import BrandButton from './ui/BrandButton';
 import Image from 'next/image';
 import logo from '@/public/sample-logo.png';
 import { motion, AnimatePresence } from 'motion/react';
-import { MdArrowDropDown } from "react-icons/md";
+import { MdArrowDropDown } from 'react-icons/md';
 
 const Header = () => {
   const lastYRef = useRef(0);
@@ -92,7 +92,7 @@ const Header = () => {
   return (
     <div className="relative">
       <header
-        className={`${hidden ? '-translate-y-[150%] opacity-0' : 'translate-y-0'} fixed w-full z-50 top-0 md:top-4 left-1/2 -translate-x-1/2 flex justify-between lg:justify-between items-center h-[10vh] max-w-360 bg-brandLightGray  ${menuOpen ? '' : 'shadow-sm'} text-black my-0 px-6 sm:px-8 lg:px-6 rounded-0 lg:rounded-2xl transition-all duration-500 ease-in-out`}
+        className={`${hidden ? '-translate-y-[150%] opacity-0' : 'translate-y-0'} fixed w-full z-50 top-0 md:top-4 left-1/2 -translate-x-1/2 flex justify-between lg:justify-between items-center py-4 max-w-360 bg-brandLightGray  ${menuOpen ? '' : 'shadow-sm'} text-black my-0 px-6 sm:px-8 lg:px-6 rounded-0 lg:rounded-2xl transition-all duration-500 ease-in-out`}
       >
         <Image src={logo} width={100} loading="eager" height={100} alt="" />
         <motion.nav
@@ -109,8 +109,19 @@ const Header = () => {
               Home
             </Link>
           </motion.div>
-          <motion.div variants={linkVariants} className="relative transition-all duration-50 ease-in-out group">
-            <Link href='/about' className="group-hover:text-brandPurple flex space-x-4 items-center">About <span><MdArrowDropDown className='scale-125'/></span></Link>
+          <motion.div
+            variants={linkVariants}
+            className="relative transition-all duration-50 ease-in-out group"
+          >
+            <Link
+              href="/about"
+              className="group-hover:text-brandPurple flex space-x-4 items-center"
+            >
+              About{' '}
+              <span>
+                <MdArrowDropDown className="scale-125" />
+              </span>
+            </Link>
             <div className="absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-brandGray shadow-2xl py-10 rounded-2xl transition-all duration-150 ease-in-out">
               <div className="flex flex-col space-y-4">
                 <Link
@@ -172,16 +183,19 @@ const Header = () => {
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <span
-              className={`h-0.5 w-6 bg-black transition-all duration-300 ${menuOpen ? 'translate-y-1.5 rotate-45' : ''
-                }`}
+              className={`h-0.5 w-6 bg-black transition-all duration-300 ${
+                menuOpen ? 'translate-y-1.5 rotate-45' : ''
+              }`}
             />
             <span
-              className={`h-0.5 w-4 bg-black transition-all duration-300 ${menuOpen ? 'opacity-0' : ''
-                }`}
+              className={`h-0.5 w-4 bg-black transition-all duration-300 ${
+                menuOpen ? 'opacity-0' : ''
+              }`}
             />
             <span
-              className={`h-0.5 w-6 bg-black transition-all duration-300 ${menuOpen ? '-translate-y-1.5 -rotate-45' : ''
-                }`}
+              className={`h-0.5 w-6 bg-black transition-all duration-300 ${
+                menuOpen ? '-translate-y-1.5 -rotate-45' : ''
+              }`}
             />
           </div>
         </div>
