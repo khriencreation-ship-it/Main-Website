@@ -27,8 +27,11 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(validationSchema) });
+  const submitForm = (data: any) => {
+    console.log(data);
+  };
   return (
-    <section  className="min-h-screen flex justify-center items-start p-20 my-6 gap-10">
+    <section className="min-h-screen flex justify-center items-start px-3 lg:p-20 my-6 gap-10">
       <div className=" w-full lg:w-1/2 p-5">
         <h3 className="text-3xl font-semibold mb-2">Get in Touch with Us</h3>
         <p className="text-lg">
@@ -36,8 +39,8 @@ const ContactForm = () => {
           consultation, or want to discuss your next big project, our team is
           ready to help.
         </p>
-        <form action="" className="mt-6 flex flex-col space-y-8">
-          <div className=" flex flex-col md:flex-row space-x-6">
+        <form action="" className="mt-6 flex flex-col space-y-8" onSubmit={handleSubmit(submitForm)}>
+          <div className=" flex flex-col md:flex-row space-x-6 space-y-4">
             <div className=" flex flex-col space-y-2 flex-1">
               <label htmlFor="firstName" className="text-brandGray">
                 First Name
@@ -73,7 +76,7 @@ const ContactForm = () => {
               )}
             </div>
           </div>
-          <div className="flex flex-col md:flex-row space-x-6">
+          <div className="flex flex-col md:flex-row space-x-6 space-y-4">
             <div className="flex flex-col space-y-2 flex-1">
               <label htmlFor="email">Email</label>
               <input
@@ -115,10 +118,10 @@ const ContactForm = () => {
               {...register('subject')}
             />
             {errors.subject && (
-                <p className="text-sm text-red-500">
-                  {errors.subject.message}
-                </p>
-              )}
+              <p className="text-sm text-red-500">
+                {errors.subject.message}
+              </p>
+            )}
           </div>
           <div className="flex flex-col space-y-2 flex-1">
             <label htmlFor="message">Message</label>
@@ -130,10 +133,10 @@ const ContactForm = () => {
               {...register('message')}
             ></textarea>
             {errors.message && (
-                <p className="text-sm text-red-500">
-                  {errors.message.message}
-                </p>
-              )}
+              <p className="text-sm text-red-500">
+                {errors.message.message}
+              </p>
+            )}
           </div>
           <div className="flex flex-col space-y-2 flex-1">
             <label htmlFor="contactMethod">Preferred Contact Method</label>
@@ -150,19 +153,19 @@ const ContactForm = () => {
               <option value="phone">Phone Number</option>
             </select>
             {errors.contactMethod && (
-                <p className="text-sm text-red-500">
-                  {errors.contactMethod.message}
-                </p>
-              )}
+              <p className="text-sm text-red-500">
+                {errors.contactMethod.message}
+              </p>
+            )}
           </div>
           <div className="">
-            <button  type="submit" className="text-black bg-brandYellow px-6 py-2 text-lg rounded-lg hover:opacity-80">
+            <button type="submit" className="text-black bg-brandYellow px-6 py-2 text-lg rounded-lg hover:opacity-80">
               Submit Form
             </button>
           </div>
         </form>
       </div>
-      <div className="relative w-full lg:w-1/2 min-h-100 lg:h-225 overflow-hidden">
+      <div className="relative w-full hidden lg:block lg:w-1/2 min-h-100 lg:h-225 overflow-hidden">
         <Image src={formImage} alt="" fill className="object-cover" />
       </div>
     </section>
