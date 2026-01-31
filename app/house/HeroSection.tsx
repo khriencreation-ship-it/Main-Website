@@ -8,7 +8,7 @@ import houseIcon from '@/public/house-section.png';
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-brandPurple overflow-hidden max-w-360 mx-auto my-6 mt-[12vh] md:mt-[16vh] shadow-sm rounded-[3rem] min-h-[70vh] flex items-center justify-between">
+    <section className="relative bg-brandPurple overflow-hidden max-w-360 mx-auto my-6 mt-[13vh] md:mt-[16vh] shadow-sm rounded-[3rem] min-h-[70vh] flex flex-col lg:flex-row items-center justify-center">
 
       <div className="relative z-10 text-white w-full px-8 md:px-20 py-20 flex flex-col items-start text-left">
         <motion.div
@@ -52,12 +52,11 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* Vertical Text Sidecar */}
 
       </div>
 
       <motion.div
-        className='absolute right-0 top-0'
+        className=''
         initial={{ opacity: 0, scale: 0.6 }}
         animate={{ opacity: 1, scale: 1, }}
         transition={{
@@ -68,11 +67,6 @@ const HeroSection = () => {
       >
         <Image src={houseIcon} className="object-cover z-30" alt="" />
       </motion.div>
-      <div className="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2 rotate-90 origin-right">
-        <p className="text-[10px] font-black uppercase tracking-[1em] text-white/20 whitespace-nowrap">
-          KHRIEN — ARCHITECTING SCALE
-        </p>
-      </div>
     </section>
   );
 };

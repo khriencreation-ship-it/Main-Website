@@ -123,7 +123,7 @@ const Header = () => {
               </span>
             </Link>
             <div className="absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-brandGray shadow-2xl py-10 rounded-2xl transition-all duration-150 ease-in-out">
-              <div className="flex flex-col space-y-4">
+              <div className="flex flex-col space-y-4 text-black">
                 <Link
                   className="px-10 hover:text-brandPurple transition-all duration-50 ease-in-out"
                   href="/about"
