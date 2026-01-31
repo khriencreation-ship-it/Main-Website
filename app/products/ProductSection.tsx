@@ -1,13 +1,23 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import BrandButton from '@/components/ui/BrandButton';
-
+type productType = {
+  id: number;
+  title: string;
+  category: string;
+  subtitle: string;
+  description: string;
+  backgroundColor: string;
+  buttonColor: string;
+  navigateTo: string;
+}
 const ProductSection = () => {
   const products = [
     {
       id: 1,
       title: 'Productivity',
+      category: 'productivity',
       subtitle: 'Quest',
       description: 'Streamline your workflow and boost team productivity with intelligent task management and collaboration tools.',
       backgroundColor: 'bg-brandYellow',
@@ -17,6 +27,7 @@ const ProductSection = () => {
     {
       id: 2,
       title: 'Legal Technology',
+      category: 'legal-technology',
       subtitle: 'Firm Desk',
       description: 'Comprehensive legal practice management software designed to help law firms manage cases, clients, and documents efficiently.',
       backgroundColor: 'bg-brandGreen',
@@ -26,6 +37,7 @@ const ProductSection = () => {
     {
       id: 3,
       title: 'AI & Creative Technology',
+      category: 'ai-creative-technology',
       subtitle: 'Khrien Flow',
       description: 'Harness the power of AI to enhance your creative workflow with intelligent automation and smart design tools.',
       backgroundColor: 'bg-brandPurple',
@@ -33,9 +45,10 @@ const ProductSection = () => {
       navigateTo: '#'
     },
   ];
+  const [filterItems, setFilterItems] = useState<productType[]>(products)
 
   return (
-    <section className="max-w-360 mx-auto my-12 px-4 md:px-6 lg:py-10">
+    <section className="max-w-360 mx-auto my-10 px-4 md:px-6 lg:py-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -50,27 +63,36 @@ const ProductSection = () => {
           Discover our suite of innovative products designed to transform the way you work
         </p>
       </motion.div>
+      <div className="mt-6 mb-8 border border-brandGray/50 rounded-full  px-5 py-3 flex w-fit mx-auto">
+        <p className="text-white/50">filter by :</p>
+        <div className="flex gap-5 ml-2">
+          <button className='text-white/50' onClick={() => setFilterItems(products)}>All</button>
+          <button className='text-white/50' onClick={() => setFilterItems(products.filter((item) => item.category === 'productivity'))}>Productivity</button>
+          <button className='text-white/50' onClick={() => setFilterItems(products.filter((item) => item.category === 'legal-technology'))}>Legal <span className='hidden md:inline'>Technology</span></button>
+          <button className='text-white/50' onClick={() => setFilterItems(products.filter((item) => item.category === 'ai-creative-technology'))}>AI & Creative <span className='hidden md:inline'>Technology</span></button>
+        </div>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        {products.map((product, index) => (
+        {filterItems.map((product, index) => (
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
-            className={`${product.backgroundColor} rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between min-h-96`}
+            className={`p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors`}
           >
             <div className="space-y-4">
               <div>
-                <h3 className="text-2xl md:text-3xl font-black text-black uppercase">
-                  {product.title}
-                </h3>
-                <h4 className="text-xl md:text-2xl font-bold text-black/80 mt-2">
+                <h3 className="text-2xl md:text-3xl font-black text-white uppercase">
                   {product.subtitle}
-                </h4>
+                </h3>
+                <h5 className="text-lg font-bold text-white/80 mt-2">
+                  {product.title}
+                </h5>
               </div>
-              <p className="text-base md:text-lg text-black/70 leading-relaxed">
+              <p className="text-base md:text-lg text-white/60 leading-relaxed">
                 {product.description}
               </p>
             </div>

@@ -198,7 +198,7 @@ const Header = () => {
         </div>
       </header>
       <AnimatePresence>
-        {menuOpen && <MobileNav key="mobile-nav" menuOpen={menuOpen} />}
+        {menuOpen && <MobileNav key="mobile-nav" menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
       </AnimatePresence>
     </div>
   );

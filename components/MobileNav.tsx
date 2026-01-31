@@ -4,9 +4,10 @@ import { motion } from 'motion/react';
 
 type MobileNavProps = {
   menuOpen: boolean;
+  setMenuOpen: (value: boolean) => void;
 };
 
-const MobileNav = ({ menuOpen }: MobileNavProps) => {
+const MobileNav = ({ menuOpen, setMenuOpen }: MobileNavProps) => {
   const containerVariants = {
     hidden: { y: '-100%', opacity: 0 },
     visible: {
@@ -57,6 +58,7 @@ const MobileNav = ({ menuOpen }: MobileNavProps) => {
               <Link
                 className=" text-black hover:text-brandPurple transition-all duration-50 ease-in-out block py-2"
                 href={link.href}
+                onClick={() => setMenuOpen(!menuOpen)}
               >
                 {link.name}
               </Link>
