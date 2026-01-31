@@ -77,10 +77,6 @@ const MembershipSection = () => {
                         </p>
                     </motion.div>
                 </div>
-
-                {/* Subtle background circles */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-brandPurple/20 rounded-full blur-[100px] -mr-32 -mt-32"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-brandYellow/10 rounded-full blur-[100px] -ml-32 -mb-32"></div>
             </div>
         </section>
     );

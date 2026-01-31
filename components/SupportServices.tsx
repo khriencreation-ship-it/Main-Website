@@ -73,9 +73,9 @@ const SupportServices = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8 }}
-      className="relative max-w-360 mx-auto bg-brandYellow my-6 shadow-sm rounded-3xl p-6 md:p-20"
+      className="relative max-w-360 mx-auto bg-black my-6 shadow-sm rounded-3xl p-6 md:p-20"
     >
-      <Image
+      {/* <Image
         src={heroImage}
         alt="Hero"
         className="hidden md:block size-12 absolute right-32 top-20 animate-pulse"
@@ -93,13 +93,13 @@ const SupportServices = () => {
       <Image
         src={heroImage}
         alt="Hero"
-        className="hidden md:block size-12 absolute bottom-16 left-20 animate-pulse"
-      />
-      <div className="flex flex-col space-y-5 justify-center items-center max-w-3xl mx-auto text-center text-black">
+        className="hidden bg-brandYellow rounded-full p-1 md:block size-12 absolute bottom-16 left-20 animate-pulse"
+      /> */}
+      <div className="flex flex-col space-y-5 justify-center items-center max-w-3xl mx-auto text-center text-brandYellow">
         <div className="text-xl md:text-2xl font-black">
           <p className='capitalize'>creative support services</p>
         </div>
-        <h1 className="text-3xl md:text-6xl font-black leading-none text-black">
+        <h1 className="text-3xl md:text-6xl font-black leading-none text-brandYellow">
           Strategic Services that Complement Technology
         </h1>
         <p className="text-lg md:text-2xl">
@@ -118,26 +118,22 @@ const SupportServices = () => {
           <motion.div
             key={idx}
             variants={itemVariants}
-            className="rounded-2xl border border-brandPurple/30 py-12 px-8 
-                 shadow-sm hover:shadow-xl hover:-translate-y-1
-                 transition-all duration-300 bg-brandGray group text-center"
+            className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
           >
             {/* Icon */}
             <div
-              className="mb-5 w-14 h-14 mx-auto flex items-center justify-center
-                      text-brandYellow text-3xl font-bold
-                      bg-black rounded-full hover:bg-black group-hover:-translate-y-3 transition-all duration-300 ease-in-out"
+              className="text-3xl text-brandYellow mb-4"
             >
               {service.icon}
             </div>
 
             {/* Title */}
-            <h3 className="text-2xl font-semibold mb-3 text-black">
+            <h3 className="text-xl font-bold mb-2">
               {service.title}
             </h3>
 
             {/* Description */}
-            <p className="text-black text-lg leading-relaxed text-center">
+            <p className="text-white/60">
               {service.description}
             </p>
           </motion.div>
