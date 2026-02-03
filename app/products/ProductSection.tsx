@@ -47,6 +47,12 @@ const ProductSection = () => {
   ];
   const [filterItems, setFilterItems] = useState<productType[]>(products)
 
+  const [selectedItemCategory, setSelectedItemCategory] = useState<string>("all");
+
+  const handleSelectItem = (category: string)=>{
+    setSelectedItemCategory(category)
+    setFilterItems(products.filter((item) => item.category === category))
+  }
   return (
     <section className="max-w-360 mx-auto my-10 px-4 md:px-6 lg:py-10">
       <motion.div
@@ -66,10 +72,13 @@ const ProductSection = () => {
       <div className="mt-6 mb-8 border border-brandGray/50 rounded-full  px-5 py-3 flex w-fit mx-auto">
         <p className="text-white/50">filter by :</p>
         <div className="flex gap-5 ml-2">
-          <button className='text-white/50' onClick={() => setFilterItems(products)}>All</button>
-          <button className='text-white/50' onClick={() => setFilterItems(products.filter((item) => item.category === 'productivity'))}>Productivity</button>
-          <button className='text-white/50' onClick={() => setFilterItems(products.filter((item) => item.category === 'legal-technology'))}>Legal <span className='hidden md:inline'>Technology</span></button>
-          <button className='text-white/50' onClick={() => setFilterItems(products.filter((item) => item.category === 'ai-creative-technology'))}>AI & Creative <span className='hidden md:inline'>Technology</span></button>
+          <button className={`${selectedItemCategory === "all" ? "text-white" : "text-white/50"} `} onClick={() => {
+            setFilterItems(products)
+            setSelectedItemCategory("all")
+          }}>All</button>
+          <button className={`${selectedItemCategory === "productivity" ? "text-white" : "text-white/50"} `} onClick={() => handleSelectItem("productivity")}>Productivity</button>
+          <button className={`${selectedItemCategory === "legal-technology" ? "text-white" : "text-white/50"} `} onClick={() => handleSelectItem("legal-technology")}>Legal <span className='hidden md:inline'>Technology</span></button>
+          <button className={`${selectedItemCategory === "ai-creative-technology" ? "text-white" : "text-white/50"} `} onClick={() => handleSelectItem("ai-creative-technology")}>AI & Creative <span className='hidden md:inline'>Technology</span></button>
         </div>
       </div>
 
