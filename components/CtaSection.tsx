@@ -23,14 +23,14 @@ const CtaSection = () => {
         <div className="mt-6 flex flex-col lg:flex-row items-center justify-center gap-6 mx-auto">
           <BrandButton
             buttonPosition="center"
-            button="Let&apos;s Build Together"
+            button="Schedule A meeting"
             navigateTo="#"
             backgroundColor="brandGreen"
           />
           <BrandButton
             buttonPosition="center"
             button="Contact Us"
-            navigateTo="#"
+            navigateTo="contact"
             backgroundColor="brandYellow"
           />
         </div>

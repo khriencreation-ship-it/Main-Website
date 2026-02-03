@@ -51,7 +51,7 @@ const MobileNav = ({ menuOpen, setMenuOpen }: MobileNavProps) => {
             { name: 'Solutions', href: '/solutions' },
             { name: 'Products', href: '/products' },
             { name: 'Services', href: '/services' },
-            { name: 'House', href: '/house' },
+            // { name: 'House', href: '/house' },
             { name: 'Academy', href: '/academy' },
           ].map((link, idx) => (
             <motion.div key={idx} variants={itemVariants}>

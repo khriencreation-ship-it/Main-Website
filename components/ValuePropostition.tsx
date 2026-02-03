@@ -121,14 +121,14 @@ const ValuePropostition = () => {
             return (
               <motion.div
                 variants={itemVariants}
-                className="bg-brandLightGray text-black text-center p-10 rounded-xl flex flex-col justify-center items-center space-y-8 hover:bg-brandYellow transition-all duration-500 group"
+                className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
                 key={idx}
               >
-                <div className=" bg-black size-20 rounded-full relative transition-transform duration-500 group-hover:-translate-y-3">
-                  <value.icon className=" size-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-brandGray  " />
-                </div>
-                <h1 className="text-3xl font-semibold mb-3">{value.title}</h1>
-                <p className="text-xl leading-relaxed">{value.description}</p>
+                {/* <div className=" bg-black size-20 rounded-full relative transition-transform duration-500 group-hover:-translate-y-3">
+                </div> */}
+                <value.icon className=" text-4xl text-brandYellow mb-4 " />
+                <h1 className="text-xl font-bold mb-2">{value.title}</h1>
+                <p className="text-white/60">{value.description}</p>
               </motion.div>
             );
           })}

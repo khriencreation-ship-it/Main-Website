@@ -153,14 +153,14 @@ const Header = () => {
               Services
             </Link>
           </motion.div>
-          <motion.div variants={linkVariants}>
+          {/* <motion.div variants={linkVariants}>
             <Link
               className="hover:text-brandPurple transition-all duration-50 ease-in-out"
               href="/house"
             >
               House
             </Link>
-          </motion.div>
+          </motion.div> */}
           <motion.div variants={linkVariants}>
             <Link
               className="hover:text-brandPurple transition-all duration-50 ease-in-out"

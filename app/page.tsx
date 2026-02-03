@@ -13,7 +13,7 @@ const page = () => {
         <HeroSection />
         <ValuePropostition />
         <SupportServices />
-        <House />
+        {/* <House /> */}
         <TrustSection />
         <CtaSection />
         <Footer />

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import logo from '@/public/sample-logo.png';
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
 import { motion } from 'motion/react';
 
 const Footer = () => {
@@ -41,7 +40,6 @@ const Footer = () => {
           <div className=" flex space-x-4">
             <span className='border border-brandGray p-3 rounded-full'><FaFacebook className='scale-150 hover:text-brandYellow transition-all duration-100 ease-in-out' /></span>
             <span className='border border-brandGray p-3 rounded-full'><FaInstagram className='scale-150 hover:text-brandYellow transition-all duration-100 ease-in-out' /></span>
-            <span className='border border-brandGray p-3 rounded-full'><BsTwitterX className='scale-150 hover:text-brandYellow transition-all duration-100 ease-in-out' /></span>
             <span className='border border-brandGray p-3 rounded-full'><FaLinkedin className='scale-150 hover:text-brandYellow transition-all duration-100 ease-in-out' /></span>
           </div>
         </div>

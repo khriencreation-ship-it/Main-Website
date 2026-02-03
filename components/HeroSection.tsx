@@ -53,7 +53,7 @@ const HeroSection = () => {
             <BrandButton
               buttonPosition="start"
               button="Explore Solutions"
-              navigateTo="#"
+              navigateTo="solutions"
               backgroundColor="brandGreen"
             />
           </motion.div>
