@@ -51,7 +51,7 @@ const HeroSection = () => {
           /> */}
           <BrandButton
             buttonPosition="center"
-            button="Request Access"
+            button="See Demo"
             navigateTo="#"
             backgroundColor="brandYellow"
           />

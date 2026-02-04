@@ -78,26 +78,22 @@ const TechnologySection = () => {
                     <motion.div
                         key={idx}
                         variants={itemVariants}
-                        className={`rounded-2xl border border-brandPurple/30 py-12 px-8 
-                             shadow-sm hover:shadow-xl
-                             transition-shadow duration-300 bg-brandGray group text-center ${feature.hoverColor}`}
+                        className={`p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors text-center`}
                     >
                         {/* Icon */}
                         <div
-                            className="mb-5 w-14 h-14 mx-auto flex items-center justify-center
-                                    text-brandPurple text-3xl font-bold
-                                    bg-black rounded-full group-hover:-translate-y-3 group-hover:text-white transition-all duration-300 ease-in-out"
+                            className="text-4xl text-brandYellow mb-4 flex justify-center"
                         >
                             {feature.icon}
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-2xl font-semibold mb-3 text-black">
+                        <h3 className="text-2xl font-bold mb-2">
                             {feature.title}
                         </h3>
 
                         {/* Description */}
-                        <p className="text-black text-lg leading-relaxed text-center">
+                        <p className="text-white/60">
                             {feature.description}
                         </p>
                     </motion.div>
@@ -114,26 +110,22 @@ const TechnologySection = () => {
                     <motion.div
                         key={idx}
                         variants={itemVariants}
-                        className={`rounded-2xl border border-brandPurple/30 py-12 px-8 
-                             shadow-sm hover:shadow-xl
-                             transition-shadow duration-300 bg-brandGray group text-center ${feature.hoverColor}`}
+                        className={`p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors text-center`}
                     >
                         {/* Icon */}
                         <div
-                            className="mb-5 w-14 h-14 mx-auto flex items-center justify-center
-                                    text-brandPurple text-3xl font-bold
-                                    bg-black rounded-full group-hover:-translate-y-3 group-hover:text-white transition-all duration-300 ease-in-out"
+                            className="text-4xl text-brandYellow mb-4 flex justify-center"
                         >
-                            {feature.icon}
+                            <span>{feature.icon}</span>
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-2xl font-semibold mb-3 text-black">
+                        <h3 className="text-2xl font-bold mb-2">
                             {feature.title}
                         </h3>
 
                         {/* Description */}
-                        <p className="text-black text-lg leading-relaxed text-center">
+                        <p className="text-white/60">
                             {feature.description}
                         </p>
                     </motion.div>
