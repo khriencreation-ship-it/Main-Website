@@ -19,21 +19,22 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black/50 z-10" />
       </div>
       <div className=" relative flex justify-between items-center py-10 flex-col md:flex-row gap-10 z-30">
-        <div className="text-white space-y-6 w-full text-center">
+        <div className="text-white space-y-6 w-full text-center max-w-4xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-3xl md:text-7xl font-black uppercase italic leading-tight text-white"
+            className="text-3xl md:text-5xl lg:text-6xl font-black leading-tight text-white"
+
+          // className="text-3xl md:text-7xl font-black uppercase italic leading-tight text-white"
           >
-            <span>We Build Tools & Digital Products</span>
-            <span> for Modern Businesses.</span>
+            <span>We Build Tools & Digital Products for Modern Businesses.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-lg md:text-2xl font-semibold text-white/80"
+            className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto font-semibold"
           >
             Empowering teams with powerful software solutions, backed by
             creative expertise.
