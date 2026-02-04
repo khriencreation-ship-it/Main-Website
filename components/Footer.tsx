@@ -4,6 +4,7 @@ import logo from '@/public/sample-logo.png';
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { motion } from 'motion/react';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -27,12 +28,12 @@ const Footer = () => {
         </div>
         <div className="space-y-4">
           <h1 className='text-2xl font-bold'>Useful Links</h1>
-          <ul className='space-y-2'>
-            <li className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>About Us</li>
-            <li className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>Services</li>
-            <li className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>House</li>
-            <li className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>Academy</li>
-            <li className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>Contact Us</li>
+          <ul className='space-y-2 flex flex-col'>
+            <Link href='/about' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>About Us</Link>
+            <Link href='/services' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>Services</Link>
+            <Link href='/house' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>House</Link>
+            <Link href='/academy' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>Academy</Link>
+            <Link href='/contact' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>Contact Us</Link>
           </ul>
         </div>
         <div className="space-y-4">
