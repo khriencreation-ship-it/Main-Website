@@ -57,7 +57,7 @@ const HeroSection = () => {
           />
           <BrandButton
             buttonPosition="center"
-            button="See pitchdeck"
+            button="See Pitch Deck"
             navigateTo="#"
             backgroundColor="brandGreen"
           />

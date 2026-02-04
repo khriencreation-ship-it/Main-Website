@@ -29,7 +29,7 @@ const ProductCta = () => {
                     />
                     <BrandButton
                         buttonPosition="center"
-                        button="Request Access"
+                        button="See Pitch Deck"
                         navigateTo="#"
                         backgroundColor="brandPurple"
                     />
