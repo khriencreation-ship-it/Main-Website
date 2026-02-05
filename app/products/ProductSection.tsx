@@ -14,16 +14,16 @@ type productType = {
 }
 const ProductSection = () => {
   const products = [
-    // {
-    //   id: 1,
-    //   title: 'Productivity',
-    //   category: 'productivity',
-    //   subtitle: 'Quest',
-    //   description: 'Streamline your workflow and boost team productivity with intelligent task management and collaboration tools.',
-    //   backgroundColor: 'bg-brandYellow',
-    //   buttonColor: 'brandPurple',
-    //   navigateTo: 'productivity'
-    // },
+    {
+      id: 1,
+      title: 'Productivity',
+      category: 'productivity',
+      subtitle: 'Quest',
+      description: 'Streamline your workflow and boost team productivity with intelligent task management and collaboration tools.',
+      backgroundColor: 'bg-brandYellow',
+      buttonColor: 'brandPurple',
+      navigateTo: 'productivity'
+    },
     {
       id: 2,
       title: 'Legal Technology',
@@ -34,16 +34,16 @@ const ProductSection = () => {
       buttonColor: 'brandYellow',
       navigateTo: 'legal-technology',
     },
-    // {
-    //   id: 3,
-    //   title: 'AI & Creative Technology',
-    //   category: 'ai-creative-technology',
-    //   subtitle: 'Khrien Flow',
-    //   description: 'Harness the power of AI to enhance your creative workflow with intelligent automation and smart design tools.',
-    //   backgroundColor: 'bg-brandPurple',
-    //   buttonColor: 'brandYellow',
-    //   navigateTo: '#'
-    // },
+    {
+      id: 3,
+      title: 'AI & Creative Technology',
+      category: 'ai-creative-technology',
+      subtitle: 'Khrien Flow',
+      description: 'Harness the power of AI to enhance your creative workflow with intelligent automation and smart design tools.',
+      backgroundColor: 'bg-brandPurple',
+      buttonColor: 'brandYellow',
+      navigateTo: '#'
+    },
   ];
   const [filterItems, setFilterItems] = useState<productType[]>(products)
 
