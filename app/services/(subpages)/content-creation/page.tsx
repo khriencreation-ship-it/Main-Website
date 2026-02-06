@@ -15,20 +15,20 @@ const page = () => {
   return (
     <main className="px-4 lg:px-9 min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-brandYellow overflow-hidden max-w-360 mx-auto my-6 mt-[14vh] md:mt-[16vh] shadow-sm rounded-3xl flex flex-col justify-center items-center py-16 md:py-24 px-6 md:px-12">
+      <section className="relative overflow-hidden max-w-360 mx-auto my-6 mt-[14vh] md:mt-[16vh] shadow-sm rounded-3xl flex flex-col justify-center items-center py-16 md:py-24 px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-4xl text-center"
         >
-          <p className="text-sm md:text-base font-black text-black/50 uppercase tracking-[0.2em] mb-4">
+          <p className="text-sm md:text-base font-black text-white/50 uppercase tracking-[0.2em] mb-4">
             Service Sub-Pages
           </p>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-black uppercase mb-8 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase mb-8 leading-tight">
             Content Creation
           </h1>
-          <p className="text-xl md:text-2xl text-black/80 font-medium leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white/80 font-medium leading-relaxed max-w-3xl mx-auto">
             Purpose-built written, visual, and multimedia content aligned with product and brand goals.
           </p>
         </motion.div>

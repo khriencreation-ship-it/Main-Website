@@ -14,7 +14,7 @@ const page = () => {
   return (
     <main className="px-4 lg:px-9 min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-brandPurple text-white overflow-hidden max-w-360 mx-auto my-6 mt-[13vh] md:mt-[16vh] shadow-sm rounded-3xl flex flex-col justify-center items-center py-16 md:py-24 px-6 md:px-12">
+      <section className="relative text-white overflow-hidden max-w-360 mx-auto my-6 mt-[13vh] md:mt-[16vh] shadow-sm rounded-3xl flex flex-col justify-center items-center py-16 md:py-24 px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
