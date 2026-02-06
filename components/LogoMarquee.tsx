@@ -48,7 +48,7 @@ const LogoMarquee = () => {
                         key={index}
                         className="shrink-0 px-5"
                     >
-                        <Image src={client} alt="Client Logo" width={400} height={400} className='w-[300px] h-[300px] md:w-[400px] md:h-[200px] object-contain transition-transform hover:scale-105' />
+                        <Image src={client} alt="Client Logo" width={200} height={200} className='w-[200px] h-[200px] md:w-[400px] md:h-[100px] object-contain transition-transform hover:scale-105' />
                     </div>
                 ))}
             </motion.div>
