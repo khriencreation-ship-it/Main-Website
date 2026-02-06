@@ -1,6 +1,7 @@
 "use client"
 import BrandButton from './ui/BrandButton';
 import { motion } from 'motion/react';
+import Meetings from './ui/Meetings';
 
 const CtaSection = () => {
   return (
@@ -21,18 +22,7 @@ const CtaSection = () => {
           excellence.
         </p>
         <div className="mt-6 flex flex-col lg:flex-row items-center justify-center gap-6 mx-auto">
-          <BrandButton
-            buttonPosition="center"
-            button="Schedule A meeting"
-            navigateTo="#"
-            backgroundColor="brandGreen"
-          />
-          {/* <BrandButton
-            buttonPosition="center"
-            button="Contact Us"
-            navigateTo="contact"
-            backgroundColor="brandYellow"
-          /> */}
+          <Meetings />
         </div>
       </div>
     </motion.section>

@@ -18,7 +18,9 @@ const LogoMarquee = () => {
 
     // We duplicate the array to ensure seamless infinite scrolling
     const duplicatedClients = [...clients, ...clients];
-
+    const duration = typeof window !== "undefined" && window.innerWidth < 768
+        ? 30
+        : 50;
     return (
         <div className="w-full mt-12 py-2 overflow-hidden relative">
             <div
@@ -36,7 +38,7 @@ const LogoMarquee = () => {
                     x: ['0%', '-50%'],
                 }}
                 transition={{
-                    duration: 30,
+                    duration,
                     ease: 'linear',
                     repeat: Infinity,
                 }}
