@@ -4,6 +4,7 @@ import { motion } from 'motion/react'
 import BrandButton from '@/components/ui/BrandButton'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
+import ServicesSection from './ServicesSection'
 
 const page = () => {
   const deliverables = [
@@ -76,6 +77,7 @@ const page = () => {
         </div>
       </section>
 
+      <ServicesSection />
       {/* Case Study Section */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}

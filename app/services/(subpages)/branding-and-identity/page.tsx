@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'motion/react'
 import BrandButton from '@/components/ui/BrandButton'
 import Footer from '@/components/Footer'
-import ServicesSection from '../../ServicesSection'
+import ServicesSection from './ServicesSection'
 
 const page = () => {
   const deliverables = [
