@@ -8,6 +8,8 @@ const ServicesSection = () => {
         "/Ui-Ux/rankin.jpg",
         "/Ui-Ux/Reveus.png",
         "/Ui-Ux/Vectary.jpg",
+        "/webdesign/shalom-shabba.jpg",
+        "/webdesign/bentlabkids.jpg",
     ]
     return (
         <section className='max-w-360 mx-auto my-10 px-4 '>
