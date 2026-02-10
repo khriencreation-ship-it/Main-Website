@@ -5,7 +5,6 @@ import PromiseSection from './PromiseSection';
 import PathsSection from './PathsSection';
 import MembershipSection from './MembershipSection';
 import ToolsSection from './ToolsSection';
-import JoinSection from './JoinSection';
 import HouseCta from './HouseCta';
 
 const page = () => {

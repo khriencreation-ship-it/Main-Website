@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import Image from 'next/image';
 import React from 'react';
 import formImage from '@/public/contactus-form-image.jpeg';
@@ -7,6 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { toast } from 'react-toastify';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 type FormData = {
   firstname: string;
   lastname: string;
@@ -37,11 +38,34 @@ const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset
-  } = useForm<FormData>({ resolver: yupResolver(validationSchema), defaultValues: { firstname: '', lastname: '', email: '', phone: '', subject: '', message: '', contactMethod: '' }, });
-  const submitForm = (data: FormData) => {
+    reset,
+  } = useForm<FormData>({
+    resolver: yupResolver(validationSchema),
+    defaultValues: {
+      firstname: '',
+      lastname: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: '',
+      contactMethod: '',
+    },
+  });
+  const submitForm = async (data: FormData) => {
     try {
       console.log(data);
+      const body = new URLSearchParams({
+        name: `${data.firstname} ${data.lastname}`,
+        email: data.email,
+        message: data.message,
+      });
+
+      const response = await axios.post(
+        'https://script.google.com/macros/s/AKfycbzkKvh2skFrKr1OT9WFO_Zxh8dOON3C8u971XVOOf-IyCoSHQblpfaWaC1u7P9mcKIRSA/exec',
+        body
+      );
+      alert(data);
+      console.log(response);
       reset();
       toast.success('Form submitted successfully');
     } catch (error) {
@@ -56,14 +80,18 @@ const ContactForm = () => {
         whileInView={{ opacity: 1, scale: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className=" w-full lg:w-1/2 p-5">
+        className=" w-full lg:w-1/2 p-5"
+      >
         <h3 className="text-3xl font-semibold mb-2">Get in Touch with Us</h3>
         <p className="text-lg">
           We’d love to hear from you! Whether you have questions, need a
           consultation, or want to discuss your next big project, our team is
           ready to help.
         </p>
-        <form action="" className="mt-6 flex flex-col space-y-8" onSubmit={handleSubmit(submitForm)}>
+        <form
+          className="mt-6 flex flex-col space-y-8"
+          onSubmit={handleSubmit(submitForm)}
+        >
           <div className=" flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">
             <div className=" flex flex-col space-y-2 flex-1">
               <label htmlFor="firstName" className="text-brandGray">
@@ -111,9 +139,7 @@ const ContactForm = () => {
                 {...register('email')}
               />
               {errors.email && (
-                <p className="text-sm text-red-500">
-                  {errors.email.message}
-                </p>
+                <p className="text-sm text-red-500">{errors.email.message}</p>
               )}
             </div>
             <div className="flex flex-col space-y-2 flex-1">
@@ -126,9 +152,7 @@ const ContactForm = () => {
                 {...register('phone')}
               />
               {errors.phone && (
-                <p className="text-sm text-red-500">
-                  {errors.phone.message}
-                </p>
+                <p className="text-sm text-red-500">{errors.phone.message}</p>
               )}
             </div>
           </div>
@@ -142,9 +166,7 @@ const ContactForm = () => {
               {...register('subject')}
             />
             {errors.subject && (
-              <p className="text-sm text-red-500">
-                {errors.subject.message}
-              </p>
+              <p className="text-sm text-red-500">{errors.subject.message}</p>
             )}
           </div>
           <div className="flex flex-col space-y-2 flex-1">
@@ -157,9 +179,7 @@ const ContactForm = () => {
               {...register('message')}
             ></textarea>
             {errors.message && (
-              <p className="text-sm text-red-500">
-                {errors.message.message}
-              </p>
+              <p className="text-sm text-red-500">{errors.message.message}</p>
             )}
           </div>
           <div className="flex flex-col space-y-2 flex-1">
@@ -183,7 +203,10 @@ const ContactForm = () => {
             )}
           </div>
           <div className="">
-            <button type="submit" className="text-black bg-brandYellow px-6 py-2 text-lg rounded-lg hover:opacity-80">
+            <button
+              type="submit"
+              className="text-black bg-brandYellow px-6 py-2 text-lg rounded-lg hover:opacity-80"
+            >
               Submit Form
             </button>
           </div>
@@ -194,7 +217,8 @@ const ContactForm = () => {
         whileInView={{ opacity: 1, x: 0, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="relative w-full hidden lg:block lg:w-1/2 min-h-100 lg:h-225 overflow-hidden">
+        className="relative w-full hidden lg:block lg:w-1/2 min-h-100 lg:h-225 overflow-hidden"
+      >
         <Image src={formImage} alt="" fill className="object-cover" />
       </motion.div>
     </section>
