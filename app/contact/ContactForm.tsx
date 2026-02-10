@@ -53,19 +53,7 @@ const ContactForm = () => {
   });
   const submitForm = async (data: FormData) => {
     try {
-      console.log(data);
-      const body = new URLSearchParams({
-        name: `${data.firstname} ${data.lastname}`,
-        email: data.email,
-        message: data.message,
-      });
-
-      const response = await axios.post(
-        'https://script.google.com/macros/s/AKfycbzkKvh2skFrKr1OT9WFO_Zxh8dOON3C8u971XVOOf-IyCoSHQblpfaWaC1u7P9mcKIRSA/exec',
-        body
-      );
-      alert(data);
-      console.log(response);
+      await axios.post('/api/contact', data);
       reset();
       toast.success('Form submitted successfully');
     } catch (error) {
