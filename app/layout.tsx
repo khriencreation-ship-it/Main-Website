@@ -26,7 +26,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`bg-black text-white min-h-screen ${bricolage_grotesque.className}`}
       >
-        <Header />
+        {/* <Header /> */}
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
