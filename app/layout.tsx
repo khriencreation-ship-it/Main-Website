@@ -3,6 +3,8 @@ import './globals.css';
 import { Bricolage_Grotesque } from 'next/font/google';
 import SmoothScroll from '@/components/SmoothScroll';
 import Header from '@/components/Header';
+import ComingSoon from './coming-soon/page';
+
 
 const bricolage_grotesque = Bricolage_Grotesque({ subsets: ['latin'] });
 
@@ -15,11 +17,17 @@ export const metadata: Metadata = {
   keywords: ['Khrien', 'Business Solutions', 'Creative Agency', 'UI/UX Design', 'Branding', 'Web Development'],
 };
 
+const LAUNCH_DATE = new Date(
+  process.env.NEXT_PUBLIC_LAUNCH_DATE!
+).getTime();
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const isLaunched = Date.now() >= LAUNCH_DATE;
   return (
     <html lang="en">
       <body
@@ -27,7 +35,7 @@ export default function RootLayout({
         className={`bg-black text-white min-h-screen ${bricolage_grotesque.className}`}
       >
         {/* <Header /> */}
-        <SmoothScroll>{children}</SmoothScroll>
+        <SmoothScroll> {isLaunched ? children : <ComingSoon />}</SmoothScroll>
       </body>
     </html>
   );

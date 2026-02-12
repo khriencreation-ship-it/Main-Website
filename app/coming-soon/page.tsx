@@ -4,12 +4,11 @@ import React, { useEffect, useState } from 'react'
 
 
 
-const page = () => {
-    const launchDate = new Date();
-    launchDate.setDate(launchDate.getDate() + 7);
+const ComingSoon = () => {
+    const LAUNCH_DATE = new Date("2026-02-19T00:00:00Z").getTime();
 
     const calculateTimeLeft = () => {
-        const difference = launchDate.getTime() - new Date().getTime();
+        const difference = LAUNCH_DATE - new Date().getTime();
 
         if (difference <= 0) {
             return null;
@@ -90,4 +89,4 @@ const page = () => {
     )
 }
 
-export default page
+export default ComingSoon
