@@ -36,7 +36,6 @@ export default async function RootLayout({
   const isLaunched = Date.now() >= LAUNCH_DATE;
 
   const allowedAccess = isOwner || isLaunched
-
   return (
     <html lang="en">
       <body
