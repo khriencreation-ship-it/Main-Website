@@ -10,7 +10,7 @@ const LogoMarquee = () => {
         "/alister-greene.png",
         "/beanewborn.png",
         "/bentlab-kids.png",
-        "/gaise-baba.png",
+        "/light-out.jpeg",
         "/moade-associates.png",
         "/neegles.png",
         "/TFC-Logo.png",
