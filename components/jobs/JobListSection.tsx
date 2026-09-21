@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'motion/react';
-import { FaLocationDot, FaBriefcase, FaClock, FaArrowRight, FaUserGroup } from 'react-icons/fa6';
+import { FaLocationDot, FaBriefcase, FaClock, FaArrowRight, FaUserGroup, FaCalendarDays } from 'react-icons/fa6';
 import { FaCheckCircle } from 'react-icons/fa';
 import ApplyModal from './ApplyModal';
 
@@ -14,6 +14,7 @@ interface JobListing {
   category: string;
   location: string;
   type: string;
+  closingDate?: string;
   image: string;
   shortDesc: string;
   responsibilities: string[];
@@ -28,6 +29,7 @@ const JOBS_DATA: JobListing[] = [
     category: 'Community',
     location: 'Remote (Lagos, Nigeria)',
     type: 'Full-time',
+    closingDate: 'Friday, 25th September 2026',
     image: '/community manager website.jpg',
     shortDesc:
       'We are looking for a vibrant, strategic, and proactive Community Manager to lead engagement, nurture our creator ecosystem, and scale brand advocacy across digital platforms.',
@@ -99,8 +101,8 @@ const JobListSection = () => {
                     priority
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-zinc-950/80 via-transparent to-transparent lg:bg-linear-to-r lg:from-transparent lg:to-zinc-900/60" />
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="px-3 py-1 rounded-full bg-brandYellow text-black text-xs font-black uppercase tracking-wider shadow-md">
+                  <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
+                    <span className="px-3 py-1 rounded-full bg-brandYellow text-black text-xs font-black uppercase tracking-wider shadow-md w-fit">
                       Hiring Now
                     </span>
                   </div>
@@ -110,7 +112,7 @@ const JobListSection = () => {
                 <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-6">
                   <div>
                     {/* Tags */}
-                    <div className="flex flex-wrap items-center gap-3 text-xs font-semibold text-zinc-400 mb-3">
+                    <div className="flex flex-wrap items-center gap-2.5 text-xs font-semibold text-zinc-400 mb-3">
                       <span className="flex items-center gap-1.5 bg-zinc-800 px-3 py-1 rounded-full text-brandGreen font-bold">
                         <FaUserGroup /> {job.department}
                       </span>
@@ -120,6 +122,11 @@ const JobListSection = () => {
                       <span className="flex items-center gap-1.5 bg-zinc-800 px-3 py-1 rounded-full">
                         <FaClock /> {job.type}
                       </span>
+                      {job.closingDate && (
+                        <span className="flex items-center gap-1.5 bg-brandYellow/15 border border-brandYellow/30 px-3 py-1 rounded-full text-brandYellow font-extrabold">
+                          <FaCalendarDays className="text-brandYellow" /> Application Closes: {job.closingDate}
+                        </span>
+                      )}
                     </div>
 
                     {/* Title */}
