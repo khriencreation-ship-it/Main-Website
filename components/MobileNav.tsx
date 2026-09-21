@@ -51,6 +51,7 @@ const MobileNav = ({ menuOpen, setMenuOpen }: MobileNavProps) => {
             { name: 'Solutions', href: '/solutions' },
             { name: 'Products', href: '/products' },
             { name: 'Services', href: '/services' },
+            { name: 'Jobs', href: '/jobs' },
             // { name: 'House', href: '/house' },
             { name: 'Academy', href: '/academy' },
           ].map((link, idx) => (

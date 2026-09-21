@@ -33,6 +33,7 @@ const Footer = () => {
             <Link href='/services' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>Services</Link>
             {/* <Link href='/house' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>House</Link> */}
             <Link href='/academy' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>Academy</Link>
+            <Link href='/jobs' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>Jobs</Link>
             <Link href='/contact' className='text-xl font-bold hover:text-brandYellow transition-all duration-100 ease-in-out'>Contact Us</Link>
           </ul>
         </div>
