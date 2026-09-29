@@ -15,6 +15,7 @@ interface JobListing {
   location: string;
   type: string;
   closingDate?: string;
+  isClosed?: boolean;
   image: string;
   shortDesc: string;
   responsibilities: string[];
@@ -30,6 +31,7 @@ const JOBS_DATA: JobListing[] = [
     location: 'Remote (Lagos, Nigeria)',
     type: 'Full-time',
     closingDate: 'Friday, 25th September 2026',
+    isClosed: true,
     image: '/community manager website.jpg',
     shortDesc:
       'We are looking for a vibrant, strategic, and proactive Community Manager to lead engagement, nurture our creator ecosystem, and scale brand advocacy across digital platforms.',
@@ -102,9 +104,15 @@ const JobListSection = () => {
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-zinc-950/80 via-transparent to-transparent lg:bg-linear-to-r lg:from-transparent lg:to-zinc-900/60" />
                   <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
-                    <span className="px-3 py-1 rounded-full bg-brandYellow text-black text-xs font-black uppercase tracking-wider shadow-md w-fit">
-                      Hiring Now
-                    </span>
+                    {job.isClosed ? (
+                      <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-black uppercase tracking-wider shadow-md w-fit">
+                        Applications Closed
+                      </span>
+                    ) : (
+                      <span className="px-3 py-1 rounded-full bg-brandYellow text-black text-xs font-black uppercase tracking-wider shadow-md w-fit">
+                        Hiring Now
+                      </span>
+                    )}
                   </div>
                 </div>
 
@@ -123,8 +131,15 @@ const JobListSection = () => {
                         <FaClock /> {job.type}
                       </span>
                       {job.closingDate && (
-                        <span className="flex items-center gap-1.5 bg-brandYellow/15 border border-brandYellow/30 px-3 py-1 rounded-full text-brandYellow font-extrabold">
-                          <FaCalendarDays className="text-brandYellow" /> Application Closes: {job.closingDate}
+                        <span
+                          className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold ${
+                            job.isClosed
+                              ? 'bg-red-500/10 border border-red-500/20 text-red-400'
+                              : 'bg-brandYellow/15 border border-brandYellow/30 text-brandYellow'
+                          }`}
+                        >
+                          <FaCalendarDays className={job.isClosed ? 'text-red-400' : 'text-brandYellow'} />{' '}
+                          {job.isClosed ? 'Applications Closed' : `Application Closes: ${job.closingDate}`}
                         </span>
                       )}
                     </div>
@@ -189,13 +204,22 @@ const JobListSection = () => {
                       {expandedJobId === job.id ? 'Hide Details' : 'View Full Details & Requirements'}
                     </button>
 
-                    <button
-                      onClick={() => setActiveModalJob(job)}
-                      className="flex items-center gap-2 px-8 py-3.5 rounded-full bg-brandYellow hover:bg-amber-400 text-black font-extrabold text-base transition-all duration-300 hover:scale-105 shadow-lg shadow-brandYellow/20 cursor-pointer"
-                    >
-                      <span>Apply Now</span>
-                      <FaArrowRight className="text-sm" />
-                    </button>
+                    {job.isClosed ? (
+                      <button
+                        disabled
+                        className="flex items-center gap-2 px-8 py-3.5 rounded-full bg-zinc-800 border border-zinc-700 text-zinc-500 font-extrabold text-base cursor-not-allowed opacity-80"
+                      >
+                        <span>Applications Closed</span>
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => setActiveModalJob(job)}
+                        className="flex items-center gap-2 px-8 py-3.5 rounded-full bg-brandYellow hover:bg-amber-400 text-black font-extrabold text-base transition-all duration-300 hover:scale-105 shadow-lg shadow-brandYellow/20 cursor-pointer"
+                      >
+                        <span>Apply Now</span>
+                        <FaArrowRight className="text-sm" />
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
