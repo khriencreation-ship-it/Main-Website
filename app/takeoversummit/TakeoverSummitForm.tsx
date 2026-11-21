@@ -64,7 +64,7 @@ const validationSchema = yup.object().shape({
     .required('Email is required'),
   course: yup
     .string()
-    .oneOf([...COURSES], 'Please choose a course')
+    .oneOf<string>([...COURSES], 'Please choose a course')
     .required('Please select a course'),
 });
 
